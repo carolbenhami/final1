@@ -1,0 +1,36 @@
+<html>
+<head>
+<title> 
+   WEB-115 Final Project
+</title>
+<img src = "Yellow Creative Noodle Food Promotion Banner .jpg" width="1980" height="900">
+</head>
+
+<body>
+
+<form id = "myForm">
+<input type = "text" id = "name" placeholder = "Please enter your name." />
+<input type = "email" id = "email" placeholder = "Please enter your email." required />
+<input type = "text" id = "goal" placeholder = "What is your goal?" />
+<input type = "text" id = "meal1" placeholder = "Breakfast" />
+<input type = "text" id = "meal2" placeholder = "Snack" />
+<input type = "text" id = "meal3" placeholder = "Lunch" />
+<input type = "text" id = "meal4" placeholder = "Snack" />
+<input type = "text" id = "meal5" placeholder = "Dinner" />
+<input type = "button" id = "myButton" value = "Create meal plan!">
+</form>
+
+<script>
+    document.getElementById("myButton").addEventListener('click',myWindow)
+function myWindow(){
+    visitorName = document.getElementById("name").value;
+    myText = ("<html>\n<head>\n<title>Welcome</title>\n</head>\n<body>\n");
+    myText += ("Hello " + visitorName + ", this page was created on-the-fly!");
+    myText += ("</body>\n</html>");
+
+    flyWindow = window.open('about:blank','myPop','width=400,height=200,left=200,top=200');
+    flyWindow.document.write(myText);
+}
+</script>
+</body>
+</html>
